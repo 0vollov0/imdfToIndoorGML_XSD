@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://www.stemp.net/imdf/1.0"
+  targetNamespace="http://www.stemp.net/imdf/1.0"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:IndoorCore="http://www.opengis.net/indoorgml/1.0/core"
+  xmlns:gml="http://www.opengis.net/gml/3.2"    
+  elementFormDefault="qualified"
+>
+
+<xs:element name="AMENITY-CATEGORY" type="AMENITY-CATEGORY-TYPE"/>
+<xs:element name="FIXTURE-CATEGORY" type="FIXTURE-CATEGORY-TYPE"/>
+<xs:element name="FOOTPRINT-CATEGORY" type="FOOTPRINT-CATEGORY-TYPE"/>
+<xs:element name="GEOFENCE-CATEGORY" type="GEOFENCE-CATEGORY-TYPE"/>
+<xs:element name="LEVEL-CATEGORY" type="LEVEL-CATEGORY-TYPE"/>
+<xs:element name="OCCUPANT-CATEGORY" type="OCCUPANT-CATEGORY-TYPE"/>
+<xs:element name="RELATIONSHIP-CATEGORY" type="RELATIONSHIP-CATEGORY-TYPE"/>
+<xs:element name="SECTION-CATEGORY" type="SECTION-CATEGORY-TYPE"/>
+<xs:element name="UNIT-CATEGORY" type="UNIT-CATEGORY-TYPE"/>
+<xs:element name="VENUE-CATEGORY" type="VENUE-CATEGORY-TYPE"/>
+<xs:element name="FEATURE-CATEGORY" type="FEATURE-CATEGORY-TYPE"/>
+<xs:element name="RESTRICTION-CATEGORY" type="RESTRICTION-CATEGORY-TYPE"/>
+<xs:element name="ACCESSIBILITY-CATEGORY" type="ACCESSIBILITY-CATEGORY-TYPE"/>
+<xs:element name="ACCESS-CONTROL-CATEGORY" type="ACCESS-CONTROL-CATEGORY-TYPE"/>
+<xs:element name="DOOR-CATEGORY" type="DOOR-CATEGORY-TYPE"/>
+<xs:element name="DOORMATERIAL-CATEGORY" type="DOORMATERIAL-CATEGORY-TYPE"/>
+<xs:element name="LANGUAGE-TAG" type="LANGUAGE-TAG-TYPE"/>
+<xs:element name="BUILDING-CATEGORY" type="BUILDING-CATEGORY-TYPE"/>
+<xs:element name="OPENING-CATEGORY" type="OPENING-CATEGORY-TYPE"/>
+<xs:element name="DIRECTION" type="DIRECTION-TYPE"/>
+
+
+<xs:simpleType name="AMENITY-CATEGORY-TYPE">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value=""/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="FIXTURE-CATEGORY-TYPE">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value=""/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="FOOTPRINT-CATEGORY-TYPE">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value=""/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="GEOFENCE-CATEGORY-TYPE">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="concourse"/>
+    <xs:enumeration value="geofence"/>
+    <xs:enumeration value="paidarea"/>
+    <xs:enumeration value="platform"/>
+    <xs:enumeration value="postsecurity"/>
+    <xs:enumeration value="presecurity"/>
+    <xs:enumeration value="terminal"/>
+    <xs:enumeration value="underconstruction"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="LEVEL-CATEGORY-TYPE">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value=""/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="OCCUPANT-CATEGORY-TYPE">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value=""/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="RELATIONSHIP-CATEGORY-TYPE">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value=""/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="SECTION-CATEGORY-TYPE">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value=""/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="UNIT-CATEGORY-TYPE">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value=""/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="VENUE-CATEGORY-TYPE">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value=""/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="FEATURE-CATEGORY-TYPE">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value=""/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="RESTRICTION-CATEGORY-TYPE">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value=""/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="ACCESSIBILITY-CATEGORY-TYPE">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value=""/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="ACCESS-CONTROL-CATEGORY-TYPE">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value=""/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="DOOR-CATEGORY-TYPE">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value=""/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="DOORMATERIAL-CATEGORY-TYPE">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value=""/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="LANGUAGE-TAG">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value=""/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="BUILDING-CATEGORY-TYPE">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value=""/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="OPENING-CATEGORY-TYPE">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value=""/>
+  </xs:restriction>
+</xs:simpleType>
+
+  <xs:simpleType name="LANGUAGE-TAG-TYPE">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value=""/>
+  </xs:restriction>
+</xs:simpleType>
+  
+  <xs:simpleType name="DIRECTION-TYPE">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value=""/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

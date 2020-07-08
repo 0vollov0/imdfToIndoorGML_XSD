@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://www.stemp.net/imdf/1.0"
+    targetNamespace="http://www.stemp.net/imdf/1.0"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:IndoorCore="http://www.opengis.net/indoorgml/1.0/core"
+    xmlns:gml="http://www.opengis.net/gml/3.2"    
+    elementFormDefault="qualified"
+    >
+    <xs:import namespace="http://www.opengis.net/gml/3.2" 
+            schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    
+    <xs:include schemaLocation="http://www.stemp.net/imdf/1.0/enumeration.xsd"/>
+
+    <xs:element name="Occupant" type="OccupantType"/>
+    <xs:element name="TEMPORALITY" type="TEMPORALITYType"/>
+
+    <xs:complexType name="OccupantType">
+        <xs:sequence>
+            <xs:element name="category" type="OCCUPANT-CATEGORY"/>
+            <xs:element name="restriction" type="RESTRICTION-CATEGORY" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="outdoor" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="ordinal" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="address_id" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="building_ids" type="xs:string" minOccurs="0" maxOccurs="1"/>                    
+            <xs:element name="name" type="Labels"/>
+            <xs:element name="short_name" type="Labels"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TEMPORALITYType">
+        <xs:sequence>
+            <xs:element name="start" type="xs:string"/>
+            <xs:element name="end" type="xs:string"/>
+            <xs:element name="modified" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

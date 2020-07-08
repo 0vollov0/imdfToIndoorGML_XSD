@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://www.stemp.net/imdf/1.0"
+    targetNamespace="http://www.stemp.net/imdf/1.0"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:IndoorCore="http://www.opengis.net/indoorgml/1.0/core"
+    xmlns:gml="http://www.opengis.net/gml/3.2"    
+    elementFormDefault="qualified"
+    >
+    <xs:import namespace="http://www.opengis.net/gml/3.2" 
+            schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <xs:import namespace="http://www.opengis.net/indoorgml/1.0/core"
+        schemaLocation="http://schemas.opengis.net/indoorgml/1.0/indoorgmlcore.xsd"/>
+
+    <xs:include schemaLocation="http://www.stemp.net/imdf/1.0/enumeration.xsd"/>
+    <xs:include schemaLocation="http://www.stemp.net/imdf/1.0/basic.xsd"/>
+
+    <xs:element name="OpeningLayer" type="OpeningLayerType" substitutionGroup="IndoorCore:SpaceLayer"/>
+    <xs:element name="Door" type="DoorType"/>
+
+    <xs:complexType name="OpeningLayerType">
+        <xs:complexContent>
+            <xs:extension base="IndoorCore:SpaceLayerType">
+                <xs:sequence>
+                        <xs:element name="featureInformation" type="FeatureInformation"/>
+                        <xs:element name="category" type="OPENING-CATEGORY"/>
+                        <xs:element name="accessibility" type="ACCESSIBILITY-CATEGORY" minOccurs="0" maxOccurs="unbounded"/>
+                        <xs:element name="access_control" type="ACCESS-CONTROL-CATEGORY" minOccurs="0" maxOccurs="unbounded"/>
+                        <xs:element name="level_id" type="xs:string"/>
+                        <xs:element name="door" type="Door" minOccurs="0" maxOccurs="1"/>
+                        <xs:element name="name" type="Labels" minOccurs="0" maxOccurs="1"/>
+                        <xs:element name="alt_name" type="Labels" minOccurs="0" maxOccurs="1"/>
+                    </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="DoorType">
+        <xs:sequence>
+            <xs:element name="type" type="xs:string"/>
+            <xs:element name="automatic" type="xs:boolean"/>
+            <xs:element name="material" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
