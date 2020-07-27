@@ -4,21 +4,22 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified"
 >
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/basic"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/amenity"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/anchor"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/building"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/detail"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/fixture"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/footprint"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/geofence"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/kiosk"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/level"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/occupant"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/opening"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/relationship"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/section"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/unit"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/venue"/>
+    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/enumeration.xsd"/>
+    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/basic.xsd"/>
+    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/amenity.xsd"/>
+    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/anchor.xsd"/>
+    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/building.xsd"/>
+    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/detail.xsd"/>
+    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/fixture.xsd"/>
+    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/footprint.xsd"/>
+    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/geofence.xsd"/>
+    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/kiosk.xsd"/>
+    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/level.xsd"/>
+    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/occupant.xsd"/>
+    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/opening.xsd"/>
+    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/relationship.xsd"/>
+    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/section.xsd"/>
+    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/unit.xsd"/>
+    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/venue.xsd"/>
     
 </xs:schema>
