@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns="http://www.stemp.net/imdf/1.0"
-  targetNamespace="http://www.stemp.net/imdf/1.0"
+<xs:schema xmlns="https://0vollov0.github.io/imdfToIndoorGML_XSD"
+  targetNamespace="https://0vollov0.github.io/imdfToIndoorGML_XSD"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:IndoorCore="http://www.opengis.net/indoorgml/1.0/core"
   xmlns:gml="http://www.opengis.net/gml/3.2"    
