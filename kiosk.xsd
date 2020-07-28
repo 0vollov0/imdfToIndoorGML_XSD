@@ -32,8 +32,8 @@
                     <xs:element name="featureInformation" type="FeatureInformation"/>
                     <xs:element name="anchor_id" type="xs:string" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="level_id" type="xs:string"/>                    
-                    <xs:element name="name" type="Labels" minOccurs="0" maxOccurs="1"/>
-                    <xs:element name="alt_name" type="Labels" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="name" type="LabelsType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="alt_name" type="LabelsType" minOccurs="0" maxOccurs="1"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
