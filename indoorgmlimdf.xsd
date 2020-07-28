@@ -2,6 +2,7 @@
 <xs:schema 
     xmlns="https://0vollov0.github.io/imdfToIndoorGML_XSD"
     targetNamespace="https://0vollov0.github.io/imdfToIndoorGML_XSD"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified"
 >
     <xs:include schemaLocation="enumeration.xsd"/>
