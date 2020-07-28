@@ -3,7 +3,7 @@
     xmlns="https://0vollov0.github.io/imdfToIndoorGML_XSD"
     targetNamespace="https://0vollov0.github.io/imdfToIndoorGML_XSD"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:IndoorCore="http://www.opengis.net/indoorgml/1.0/core"
+    xmlns:idc="http://www.opengis.net/indoorgml/1.0/core"
     xmlns:gml="http://www.opengis.net/gml/3.2"    
     elementFormDefault="qualified"
 >
@@ -17,7 +17,7 @@
     <xs:include schemaLocation="occupant.xsd"/>
     <xs:include schemaLocation="relationship.xsd"/>
 
-    <xs:element name="IndoorFeaturesForIMDF" type="IndoorFeaturesForIMDFType" substitutionGroup="IndoorCore:IndoorFeatures"/>
+    <xs:element name="IndoorFeaturesForIMDF" type="IndoorFeaturesForIMDFType" substitutionGroup="idc:IndoorFeatures"/>
     <xs:element name="Manifest" type="ManifestType"/>
     <xs:element name="Address" type="AddressType"/>
     <xs:element name="Labels" type="LabelsType"/>
@@ -26,7 +26,7 @@
 
     <xs:complexType name="IndoorFeaturesForIMDFType">
         <xs:complexContent>
-            <xs:extension base="IndoorCore:IndoorFeaturesType">
+            <xs:extension base="idc:IndoorFeaturesType">
                 <xs:sequence>
                     <xs:element name="manifest" type="ManifestType"/>
                     <xs:element name="address" type="AddressType"/>
@@ -60,14 +60,14 @@
         </xs:sequence>
     </xs:complexType>
     
-    <xs:complexType name="LabelsType">
+    <xs:complexType name="Labels">
         <xs:sequence>
             <xs:element name="language" type="LANGUAGE-TAG"/>
             <xs:element name="name"/>
         </xs:sequence>
     </xs:complexType>
     
-    <xs:complexType name="FeatureInformationType">
+    <xs:complexType name="FeatureInformation">
         <xs:sequence>
             <xs:element name="id" type="xs:string"/>
             <xs:element name="type"/>
