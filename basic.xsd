@@ -60,14 +60,14 @@
         </xs:sequence>
     </xs:complexType>
     
-    <xs:complexType name="Labels">
+    <xs:complexType name="LabelsType">
         <xs:sequence>
             <xs:element name="language" type="LANGUAGE-TAG"/>
             <xs:element name="name"/>
         </xs:sequence>
     </xs:complexType>
     
-    <xs:complexType name="FeatureInformation">
+    <xs:complexType name="FeatureInformationType">
         <xs:sequence>
             <xs:element name="id" type="xs:string"/>
             <xs:element name="type"/>
