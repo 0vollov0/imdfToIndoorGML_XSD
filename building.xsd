@@ -3,7 +3,7 @@
     xmlns="https://0vollov0.github.io/imdfToIndoorGML_XSD"
     targetNamespace="https://0vollov0.github.io/imdfToIndoorGML_XSD"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:IndoorCore="http://www.opengis.net/indoorgml/1.0/core"
+    xmlns:idc="http://www.opengis.net/indoorgml/1.0/core"
     xmlns:gml="http://www.opengis.net/gml/3.2"    
     xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
     elementFormDefault="qualified"
@@ -17,20 +17,12 @@
             
     <xs:include schemaLocation="enumeration.xsd"/>
     
-    <xs:override schemaLocation="http://schemas.opengis.net/indoorgml/1.0/indoorgmlcore.xsd">
-        <xs:complexType name="NodesType">
-            <xs:sequence>
-                <xs:element name="stateMember" type="BuildingStateType" minOccurs="1" maxOccurs="unbounded"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:override>
-    
-    <xs:element name="BuildingLayer" type="BuildingLayerType" substitutionGroup="IndoorCore:SpaceLayer"/>
-    <xs:element name="BuildingState" type="BuildingStateType" substitutionGroup="IndoorCore:State"/>
+    <xs:element name="BuildingLayer" type="BuildingLayerType" substitutionGroup="idc:SpaceLayer"/>
+    <xs:element name="BuildingState" type="BuildingStateType" substitutionGroup="idc:State"/>
 
     <xs:complexType name="BuildingStateType">
         <xs:complexContent>
-            <xs:extension base="IndoorCore:StateType">
+            <xs:extension base="idc:StateType">
                 <xs:sequence>
                     <xs:element name="category" type="BUILDING-CATEGORY"/>
                     <xs:element name="restriction" type="RESTRICTION-CATEGORY" minOccurs="0" maxOccurs="1"/>
@@ -42,9 +34,9 @@
 
     <xs:complexType name="BuildingLayerType">
         <xs:complexContent>
-            <xs:extension base="IndoorCore:SpaceLayerType">
+            <xs:extension base="idc:SpaceLayerType">
                 <xs:sequence>
-                    <xs:element name="nodes" type="IndoorCore:NodesType" minOccurs="1" maxOccurs="unbounded"/>
+                    <xs:element name="nodes" type="idc:NodesType" minOccurs="1" maxOccurs="unbounded"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>

@@ -3,7 +3,7 @@
     xmlns="https://0vollov0.github.io/imdfToIndoorGML_XSD"
     targetNamespace="https://0vollov0.github.io/imdfToIndoorGML_XSD"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:IndoorCore="http://www.opengis.net/indoorgml/1.0/core"
+    xmlns:idc="http://www.opengis.net/indoorgml/1.0/core"
     xmlns:gml="http://www.opengis.net/gml/3.2"    
     elementFormDefault="qualified"
     >
@@ -23,8 +23,8 @@
             <xs:element name="ordinal" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="address_id" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="building_ids" type="xs:string" minOccurs="0" maxOccurs="1"/>                    
-            <xs:element name="name" type="Labels"/>
-            <xs:element name="short_name" type="Labels"/>
+            <xs:element name="name" type="LabelsType"/>
+            <xs:element name="short_name" type="LabelsType"/>
         </xs:sequence>
     </xs:complexType>
 

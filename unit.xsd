@@ -3,7 +3,7 @@
     xmlns="https://0vollov0.github.io/imdfToIndoorGML_XSD"
     targetNamespace="https://0vollov0.github.io/imdfToIndoorGML_XSD"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:IndoorCore="http://www.opengis.net/indoorgml/1.0/core"
+    xmlns:idc="http://www.opengis.net/indoorgml/1.0/core"
     xmlns:gml="http://www.opengis.net/gml/3.2"    
     elementFormDefault="qualified"
     >
@@ -15,27 +15,27 @@
     <xs:include schemaLocation="enumeration.xsd"/>
     <xs:include schemaLocation="basic.xsd"/>
 
-    <xs:element name="UnitLayer" type="UnitLayerType" substitutionGroup="IndoorCore:SpaceLayer"/>
-    <xs:element name="UnitSpace" type="UnitSpaceType" substitutionGroup="IndoorCore:CellSpace"/>
+    <xs:element name="UnitLayer" type="UnitLayerType" substitutionGroup="idc:SpaceLayer"/>
+    <xs:element name="UnitSpace" type="UnitSpaceType" substitutionGroup="idc:CellSpace"/>
 
     <xs:complexType name="UnitLayerType">
         <xs:complexContent>
-            <xs:extension base="IndoorCore:SpaceLayerType">
+            <xs:extension base="idc:SpaceLayerType">
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
 
     <xs:complexType name="UnitSpaceType">
         <xs:complexContent>
-            <xs:extension base="IndoorCore:CellSpaceType">
+            <xs:extension base="idc:CellSpaceType">
                 <xs:sequence>
-                    <xs:element name="featureInformation" type="FeatureInformation"/>
+                    <xs:element name="featureInformation" type="FeatureInformationType"/>
                     <xs:element name="category" type="UNIT-CATEGORY"/>
                     <xs:element name="restriction" type="RESTRICTION-CATEGORY" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="accessibility" type="ACCESSIBILITY-CATEGORY" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="level_id" type="xs:string"/>
-                    <xs:element name="name" type="Labels" minOccurs="0" maxOccurs="1"/>
-                    <xs:element name="alt_name" type="Labels" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="name" type="LabelsType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="alt_name" type="LabelsType" minOccurs="0" maxOccurs="1"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>

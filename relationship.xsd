@@ -3,7 +3,7 @@
     xmlns="https://0vollov0.github.io/imdfToIndoorGML_XSD"
     targetNamespace="https://0vollov0.github.io/imdfToIndoorGML_XSD"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:IndoorCore="http://www.opengis.net/indoorgml/1.0/core"
+    xmlns:idc="http://www.opengis.net/indoorgml/1.0/core"
     xmlns:gml="http://www.opengis.net/gml/3.2"    
     elementFormDefault="qualified"
     >
@@ -13,20 +13,20 @@
     <xs:include schemaLocation="enumeration.xsd"/>
 
     <xs:element name="Relationship" type="RelationshipType"/>
-    <xs:element name="FEATURE-REFERENCE" type="FEATURE-REFERENCEType"/>
+    <xs:element name="FEATURE-REFERENCE" type="FEATURE-REFERENCE"/>
 
     <xs:complexType name="RelationshipType">
         <xs:sequence>
             <xs:element name="category" type="RELATIONSHIP-CATEGORY"/>
             <xs:element name="direction" type="DIRECTION"/>
             <xs:element name="hours" type="xs:string"/>
-            <xs:element name="destination" type="FEATURE-REFERENCEType" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="origin" type="FEATURE-REFERENCEType" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="intermediary" type="FEATURE-REFERENCEType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="destination" type="FEATURE-REFERENCE" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="origin" type="FEATURE-REFERENCE" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="intermediary" type="FEATURE-REFERENCE" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="FEATURE-REFERENCEType">
+    <xs:complexType name="FEATURE-REFERENCE">
         <xs:sequence>
             <xs:element name="start" type="xs:string"/>
             <xs:element name="end" type="xs:string"/>

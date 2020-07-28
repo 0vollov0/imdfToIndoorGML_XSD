@@ -3,7 +3,7 @@
     xmlns="https://0vollov0.github.io/imdfToIndoorGML_XSD"
     targetNamespace="https://0vollov0.github.io/imdfToIndoorGML_XSD"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:IndoorCore="http://www.opengis.net/indoorgml/1.0/core"
+    xmlns:idc="http://www.opengis.net/indoorgml/1.0/core"
     xmlns:gml="http://www.opengis.net/gml/3.2"    
     elementFormDefault="qualified"
     >
@@ -16,22 +16,22 @@
     <xs:include schemaLocation="enumeration.xsd"/>
     <xs:include schemaLocation="basic.xsd"/>
 
-    <xs:element name="FootPrintLayer" type="FootPrintLayerType" substitutionGroup="IndoorCore:SpaceLayer"/>
-    <xs:element name="FootPrintSpace" type="FootPrintSpaceType" substitutionGroup="IndoorCore:CellSpace"/>
+    <xs:element name="FootPrintLayer" type="FootPrintLayerType" substitutionGroup="idc:SpaceLayer"/>
+    <xs:element name="FootPrintSpace" type="FootPrintSpaceType" substitutionGroup="idc:CellSpace"/>
 
     <xs:complexType name="FootPrintLayerType">
         <xs:complexContent>
-            <xs:extension base="IndoorCore:SpaceLayerType">
+            <xs:extension base="idc:SpaceLayerType">
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
 
     <xs:complexType name="FootPrintSpaceType">
         <xs:complexContent>
-            <xs:extension base="IndoorCore:CellSpaceType">
+            <xs:extension base="idc:CellSpaceType">
                 <xs:sequence>
                     <xs:element name="featureInformation" type="FeatureInformation"/>
-                    <xs:element name="category" type="FIXTURE-CATEGORY"/>
+                    <xs:element name="category" type="FEATURE-CATEGORY"/>
                     <xs:element name="building_ids" type="xs:string" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="name" type="Labels" minOccurs="0" maxOccurs="1"/>
                 </xs:sequence>

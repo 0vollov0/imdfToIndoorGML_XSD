@@ -3,7 +3,7 @@
     xmlns="https://0vollov0.github.io/imdfToIndoorGML_XSD"
     targetNamespace="https://0vollov0.github.io/imdfToIndoorGML_XSD"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:IndoorCore="http://www.opengis.net/indoorgml/1.0/core"
+    xmlns:idc="http://www.opengis.net/indoorgml/1.0/core"
     xmlns:gml="http://www.opengis.net/gml/3.2"    
     elementFormDefault="qualified"
     >
@@ -12,11 +12,11 @@
     <xs:import namespace="http://www.opengis.net/indoorgml/1.0/core"
         schemaLocation="http://schemas.opengis.net/indoorgml/1.0/indoorgmlcore.xsd"/>
 
-    <xs:element name="DetailLayer" type="DetailLayerType" substitutionGroup="IndoorCore:SpaceLayer"/>
+    <xs:element name="DetailLayer" type="DetailLayerType" substitutionGroup="idc:SpaceLayer"/>
 
     <xs:complexType name="DetailLayerType">
         <xs:complexContent>
-            <xs:extension base="IndoorCore:SpaceLayerType">
+            <xs:extension base="idc:SpaceLayerType">
                 <xs:sequence>
                     <xs:element name="level_id" type="xs:string"/>
                 </xs:sequence>

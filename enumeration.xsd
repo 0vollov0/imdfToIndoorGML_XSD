@@ -147,12 +147,6 @@
     <xs:enumeration value=""/>
   </xs:restriction>
 </xs:simpleType>
-
-  <xs:simpleType name="LANGUAGE-TAG">
-  <xs:restriction base="xs:string">
-    <xs:enumeration value=""/>
-  </xs:restriction>
-</xs:simpleType>
   
   <xs:simpleType name="DIRECTION">
     <xs:restriction base="xs:string">
