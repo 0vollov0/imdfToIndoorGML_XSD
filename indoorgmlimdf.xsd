@@ -1,25 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns="https://0vollov0.github.io/imdfToIndoorGML_XSD"
+<xs:schema 
+    xmlns="https://0vollov0.github.io/imdfToIndoorGML_XSD"
     targetNamespace="https://0vollov0.github.io/imdfToIndoorGML_XSD"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified"
 >
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/enumeration.xsd"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/basic.xsd"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/amenity.xsd"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/anchor.xsd"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/building.xsd"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/detail.xsd"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/fixture.xsd"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/footprint.xsd"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/geofence.xsd"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/kiosk.xsd"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/level.xsd"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/occupant.xsd"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/opening.xsd"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/relationship.xsd"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/section.xsd"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/unit.xsd"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/venue.xsd"/>
-    
+    <xs:include schemaLocation="enumeration.xsd"/>
+    <xs:include schemaLocation="basic.xsd"/>
+    <xs:include schemaLocation="amenity.xsd"/>
+    <xs:include schemaLocation="anchor.xsd"/>
+    <xs:include schemaLocation="building.xsd"/>
+    <xs:include schemaLocation="detail.xsd"/>
+    <xs:include schemaLocation="fixture.xsd"/>
+    <xs:include schemaLocation="footprint.xsd"/>
+    <xs:include schemaLocation="geofence.xsd"/>
+    <xs:include schemaLocation="kiosk.xsd"/>
+    <xs:include schemaLocation="level.xsd"/>
+    <xs:include schemaLocation="occupant.xsd"/>
+    <xs:include schemaLocation="opening.xsd"/>
+    <xs:include schemaLocation="relationship.xsd"/>
+    <xs:include schemaLocation="section.xsd"/>
+    <xs:include schemaLocation="unit.xsd"/>
+    <xs:include schemaLocation="venue.xsd"/>
 </xs:schema>

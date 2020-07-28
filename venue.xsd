@@ -3,16 +3,18 @@
     targetNamespace="https://0vollov0.github.io/imdfToIndoorGML_XSD"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:IndoorCore="http://www.opengis.net/indoorgml/1.0/core"
-    xmlns:gml="http://www.opengis.net/gml/3.2"    
+    xmlns:gml="http://www.opengis.net/gml/3.2"
     elementFormDefault="qualified"
     >
+    
     <xs:import namespace="http://www.opengis.net/gml/3.2" 
             schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     <xs:import namespace="http://www.opengis.net/indoorgml/1.0/core"
         schemaLocation="http://schemas.opengis.net/indoorgml/1.0/indoorgmlcore.xsd"/>
+    
 
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/enumeration.xsd"/>
-    <xs:include schemaLocation="https://0vollov0.github.io/imdfToIndoorGML_XSD/basic.xsd"/>
+    <xs:include schemaLocation="basic.xsd"/>
+    <xs:include schemaLocation="enumeration.xsd"/>
 
     <xs:element name="VenueLayer" type="VenueLayerType" substitutionGroup="IndoorCore:SpaceLayer"/>
     <xs:element name="VenueSpace" type="VenueSpaceType" substitutionGroup="IndoorCore:CellSpace"/>
@@ -28,14 +30,14 @@
         <xs:complexContent>
             <xs:extension base="IndoorCore:CellSpaceType">
                 <xs:sequence>
-                    <xs:element name="featureInformation" type="FeatureInformation"/>
-                    <xs:element name="category" type="VENUE-CATEGORY"/>
-                    <xs:element name="restriction" type="RESTRICTION-CATEGORY" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="featureInformation" type="FeatureInformationType"/>
+                    <xs:element name="category" type="VENUE-CATEGORY-TYPE"/>
+                    <xs:element name="restriction" type="RESTRICTION-CATEGORY-TYPE" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="hours" type="xs:string" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="phone" type="xs:string" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="website" type="xs:string" minOccurs="0" maxOccurs="1"/>
-                    <xs:element name="name" type="Labels" minOccurs="0" maxOccurs="1"/>
-                    <xs:element name="alt_name" type="Labels" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="name" type="LabelsType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="alt_name" type="LabelsType" minOccurs="0" maxOccurs="1"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
