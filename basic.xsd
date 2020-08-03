@@ -70,8 +70,8 @@
     <xs:complexType name="FeatureInformationType">
         <xs:sequence>
             <xs:element name="id" type="xs:string"/>
-            <xs:element name="type"/>
-            <xs:element name="feature_type"/>
+            <xs:element name="type" type="xs:string"/>
+            <xs:element name="feature_type" type="FEATURE-CATEGORY"/>
             <xs:element name="gml_geometry" type="GmlGeometryType" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
