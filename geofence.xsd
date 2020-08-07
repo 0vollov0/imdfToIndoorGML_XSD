@@ -39,7 +39,7 @@
                     <xs:element name="building_ids" type="xs:string" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="level_ids" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="parents" type="xs:string" minOccurs="0" maxOccurs="1"/>
-                    <xs:element name="name" type="LabelsType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="feature_name" type="LabelsType" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="alt_name" type="LabelsType" minOccurs="0" maxOccurs="1"/>
                 </xs:sequence>
             </xs:extension>

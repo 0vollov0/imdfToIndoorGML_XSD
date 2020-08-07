@@ -36,7 +36,7 @@
                     <xs:element name="ordinal" type="xs:string" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="address_id" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="building_ids" type="xs:string" minOccurs="0" maxOccurs="1"/>                    
-                    <xs:element name="name" type="LabelsType"/>
+                    <xs:element name="feature_name" type="LabelsType"/>
                     <xs:element name="short_name" type="LabelsType"/>
                 </xs:sequence>
             </xs:extension>
