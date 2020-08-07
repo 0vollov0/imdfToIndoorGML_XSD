@@ -29,7 +29,7 @@
         <xs:complexContent>
             <xs:extension base="idc:CellSpaceType">
                 <xs:sequence>
-                    <xs:element name="featureInformation" type="FeatureInformation"/>
+                    <xs:element name="featureInformation" type="FeatureInformationType"/>
                     <xs:element name="anchor_id" type="xs:string" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="level_id" type="xs:string"/>                    
                     <xs:element name="name" type="LabelsType" minOccurs="0" maxOccurs="1"/>
