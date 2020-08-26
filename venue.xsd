@@ -12,19 +12,10 @@
     <xs:import namespace="http://www.opengis.net/indoorgml/1.0/core"
         schemaLocation="http://schemas.opengis.net/indoorgml/1.0/indoorgmlcore.xsd"/>
     
-
     <xs:include schemaLocation="basic.xsd"/>
     <xs:include schemaLocation="enumeration.xsd"/>
-
-    <xs:element name="VenueLayer" type="VenueLayerType" substitutionGroup="idc:SpaceLayer"/>
+    
     <xs:element name="VenueSpace" type="VenueSpaceType" substitutionGroup="idc:CellSpace"/>
-
-    <xs:complexType name="VenueLayerType">
-        <xs:complexContent>
-            <xs:extension base="idc:SpaceLayerType">
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
 
     <xs:complexType name="VenueSpaceType">
         <xs:complexContent>

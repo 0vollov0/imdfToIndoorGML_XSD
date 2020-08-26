@@ -11,20 +11,22 @@
             schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     
     <xs:include schemaLocation="enumeration.xsd"/>
+    <xs:include schemaLocation="basic.xsd"/>
 
     <xs:element name="Occupant" type="OccupantType"/>
     <xs:element name="TEMPORALITY" type="TEMPORALITYType"/>
 
     <xs:complexType name="OccupantType">
         <xs:sequence>
+            <xs:element name="featureInformation" type="FeatureInformationType"/>
             <xs:element name="category" type="OCCUPANT-CATEGORY"/>
-            <xs:element name="restriction" type="RESTRICTION-CATEGORY" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="outdoor" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="anchor_id" type="xs:string"/>
+            <xs:element name="hours" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="ordinal" type="xs:string" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="address_id" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="building_ids" type="xs:string" minOccurs="0" maxOccurs="1"/>                    
-            <xs:element name="feature_name" type="LabelsType"/>
-            <xs:element name="short_name" type="LabelsType"/>
+            <xs:element name="phone" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="website" type="xs:string" minOccurs="0" maxOccurs="1"/>                    
+            <xs:element name="validity" type="TEMPORALITYType"/>
+            <xs:element name="correlation_id" type="LabelsType" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 

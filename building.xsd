@@ -16,10 +16,9 @@
         schemaLocation="http://schemas.opengis.net/indoorgml/1.0/indoorgmlcore.xsd"/>
             
     <xs:include schemaLocation="enumeration.xsd"/>
-    
-    <xs:element name="BuildingLayer" type="BuildingLayerType" substitutionGroup="idc:SpaceLayer"/>
+        
     <xs:element name="BuildingState" type="BuildingStateType" substitutionGroup="idc:State"/>
-
+    
     <xs:complexType name="BuildingStateType">
         <xs:complexContent>
             <xs:extension base="idc:StateType">
@@ -32,14 +31,5 @@
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:complexType name="BuildingLayerType">
-        <xs:complexContent>
-            <xs:extension base="idc:SpaceLayerType">
-                <xs:sequence>
-                    <xs:element name="nodes" type="idc:NodesType" minOccurs="1" maxOccurs="unbounded"/>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
 
 </xs:schema>

@@ -14,17 +14,9 @@
         schemaLocation="http://schemas.opengis.net/indoorgml/1.0/indoorgmlcore.xsd"/>
 
     <xs:include schemaLocation="enumeration.xsd"/>
-
-    <xs:element name="FixtureLayer" type="FixtureLayerType" substitutionGroup="idc:SpaceLayer"/>
+    
     <xs:element name="FixtureSpace" type="FixtureSpaceType" substitutionGroup="idc:CellSpace"/>
-
-    <xs:complexType name="FixtureLayerType">
-        <xs:complexContent>
-            <xs:extension base="idc:SpaceLayerType">
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
+    
     <xs:complexType name="FixtureSpaceType">
         <xs:complexContent>
             <xs:extension base="idc:CellSpaceType">

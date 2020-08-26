@@ -15,12 +15,12 @@
     <xs:include schemaLocation="enumeration.xsd"/>
     <xs:include schemaLocation="basic.xsd"/>
 
-    <xs:element name="OpeningLayer" type="OpeningLayerType" substitutionGroup="idc:SpaceLayer"/>
+    <xs:element name="OpeningCellSpaceBoundary" type="OpeningCellSpaceBoundaryType" substitutionGroup="idc:CellSpaceBoundary"/>
     <xs:element name="Door" type="DoorType"/>
 
-    <xs:complexType name="OpeningLayerType">
+    <xs:complexType name="OpeningCellSpaceBoundaryType">
         <xs:complexContent>
-            <xs:extension base="idc:SpaceLayerType">
+            <xs:extension base="idc:CellSpaceBoundaryType">
                 <xs:sequence>
                         <xs:element name="featureInformation" type="FeatureInformationType"/>
                         <xs:element name="category" type="OPENING-CATEGORY"/>

@@ -15,26 +15,15 @@
         schemaLocation="http://schemas.opengis.net/indoorgml/1.0/indoorgmlcore.xsd"/>
       
     <xs:include schemaLocation="enumeration.xsd"/>
-
-    <xs:element name="AnchorLayer" type="AnchorLayerType" substitutionGroup="idc:SpaceLayer"/>
+    
     <xs:element name="AnchorState" type="AnchorStateType" substitutionGroup="idc:State"/>
-
+    
     <xs:complexType name="AnchorStateType">
         <xs:complexContent>
             <xs:extension base="idc:StateType">
                 <xs:sequence>
                     <xs:element name="address_id" type="xs:string" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="unit_id" type="xs:string"/>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
-    <xs:complexType name="AnchorLayerType">
-        <xs:complexContent>
-            <xs:extension base="idc:SpaceLayerType">
-                <xs:sequence>
-                    <xs:element name="nodes" type="idc:NodesType" minOccurs="1" maxOccurs="unbounded"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>

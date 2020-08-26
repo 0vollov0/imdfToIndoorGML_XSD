@@ -22,7 +22,6 @@
     <xs:element name="Address" type="AddressType"/>
     <xs:element name="Labels" type="LabelsType"/>
     <xs:element name="FeatureInformation" type="FeatureInformationType"/>
-    <xs:element name="GmlGeometry" type="GmlGeometryType"/>
 
     <xs:complexType name="IndoorFeaturesForIMDFType">
         <xs:complexContent>
@@ -63,7 +62,7 @@
     <xs:complexType name="LabelsType">
         <xs:sequence>
             <xs:element name="language" type="LANGUAGE-TAG"/>
-            <xs:element name="name"/>
+            <xs:element name="name" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>
     
@@ -72,16 +71,7 @@
             <xs:element name="id" type="xs:string"/>
             <xs:element name="type" type="xs:string"/>
             <xs:element name="feature_type" type="FEATURE-CATEGORY"/>
-            <xs:element name="gml_geometry" type="GmlGeometryType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="gml_geometry" type="xs:string" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
-
-    <xs:complexType name="GmlGeometryType">
-        <xs:choice>
-            <xs:element name="LineString" type="gml:LineStringType"/>
-            <xs:element name="Point" type="gml:PointType"/>
-            <xs:element name="Polygon" type="gml:PolygonType"/>
-        </xs:choice>
-    </xs:complexType>
-
 </xs:schema>

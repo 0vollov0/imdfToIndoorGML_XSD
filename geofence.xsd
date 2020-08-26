@@ -15,18 +15,8 @@
     <xs:include schemaLocation="enumeration.xsd"/>
     <xs:include schemaLocation="basic.xsd"/>
 
-    <xs:element name="GeofenceLayer" type="GeofenceLayerType"
-        substitutionGroup="idc:SpaceLayer"/>
     <xs:element name="GeofenceSpace" type="GeofenceSpaceType"
         substitutionGroup="idc:CellSpace"/>
-
-    <xs:complexType name="GeofenceLayerType">
-        <xs:complexContent>
-            <xs:extension base="idc:SpaceLayerType">
-                <xs:sequence/>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
 
     <xs:complexType name="GeofenceSpaceType">
         <xs:complexContent>

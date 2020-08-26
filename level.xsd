@@ -15,15 +15,7 @@
     <xs:include schemaLocation="enumeration.xsd"/>
     <xs:include schemaLocation="basic.xsd"/>
 
-    <xs:element name="LevelLayer" type="LevelLayerType" substitutionGroup="idc:SpaceLayer"/>
     <xs:element name="LevelSpace" type="LevelSpaceType" substitutionGroup="idc:CellSpace"/>
-
-    <xs:complexType name="LevelLayerType">
-        <xs:complexContent>
-            <xs:extension base="idc:SpaceLayerType">
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
 
     <xs:complexType name="LevelSpaceType">
         <xs:complexContent>
