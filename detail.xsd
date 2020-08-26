@@ -11,14 +11,17 @@
             schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     <xs:import namespace="http://www.opengis.net/indoorgml/1.0/core"
         schemaLocation="http://schemas.opengis.net/indoorgml/1.0/indoorgmlcore.xsd"/>
+    
+    <xs:include schemaLocation="basic.xsd"/>
+    
+    <xs:element name="DetailTransition" type="DetailTransitionType" substitutionGroup="idc:Transition"/>
 
-    <xs:element name="DetailLayer" type="DetailLayerType" substitutionGroup="idc:SpaceLayer"/>
-
-    <xs:complexType name="DetailLayerType">
+    <xs:complexType name="DetailTransitionType">
         <xs:complexContent>
-            <xs:extension base="idc:SpaceLayerType">
+            <xs:extension base="idc:TransitionType">
                 <xs:sequence>
-                    <xs:element name="level_id" type="xs:string"/>
+                    <xs:element name="featureInformation" type="FeatureInformationType"/>
+                    <xs:element name="level_id" type="xs:string" />
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
