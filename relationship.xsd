@@ -11,17 +11,19 @@
             schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     
     <xs:include schemaLocation="enumeration.xsd"/>
+    <xs:include schemaLocation="basic.xsd"/>
 
     <xs:element name="Relationship" type="RelationshipType"/>
     <xs:element name="FEATURE-REFERENCE" type="FEATURE-REFERENCE"/>
 
     <xs:complexType name="RelationshipType">
         <xs:sequence>
+            <xs:element name="featureInformation" type="FeatureInformationType"/>
             <xs:element name="category" type="RELATIONSHIP-CATEGORY"/>
             <xs:element name="direction" type="DIRECTION"/>
             <xs:element name="hours" type="xs:string"/>
-            <xs:element name="destination" type="FEATURE-REFERENCE" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="origin" type="FEATURE-REFERENCE" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="destination" type="FEATURE-REFERENCE" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="origin" type="FEATURE-REFERENCE" minOccurs="0" maxOccurs="1"/>
             <xs:element name="intermediary" type="FEATURE-REFERENCE" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>

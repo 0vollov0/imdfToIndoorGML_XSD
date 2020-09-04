@@ -28,7 +28,7 @@
                     <xs:element name="hours" type="xs:string" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="phone" type="xs:string" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="website" type="xs:string" minOccurs="0" maxOccurs="1"/>
-                    <xs:element name="unit_ids" type="xs:string"/>
+                    <xs:element name="unit_ids" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
                     <xs:element name="address_id" type="xs:string" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="correlation_id" type="xs:string" minOccurs="0" maxOccurs="1"/>
                 </xs:sequence>
