@@ -48,6 +48,7 @@
     
     <xs:complexType name="AddressType">
         <xs:sequence>
+            <xs:element name="featureInformation" type="FeatureInformationType"/>
             <xs:element name="address" type="xs:string"/>
             <xs:element name="unit" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="locality" type="xs:string"/>
