@@ -1,3 +1,4 @@
+// For https://register.apple.com/resources/imdf/Categories/#categories
 const CATEGORIE_FOR_XSD_ENUM = () => {
     const categories = ['access-control','accessibility','amenity','building','door','fixture','footprint','geofence','level','occupant','opening','relationship','restriction','section','unit','venue'];
     const enumeration = {};
