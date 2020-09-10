@@ -8,12 +8,21 @@
     <xs:include schemaLocation="enumeration.xsd"/>
     
     <xs:element name="FeatureInformation" type="FeatureInformationType"/>
+    <xs:element name="Labels" type="LabelsType"/>
+
     <xs:complexType name="FeatureInformationType">
         <xs:sequence>
             <xs:element name="id" type="xs:string"/>
             <xs:element name="type" type="xs:string"/>
             <xs:element name="feature_type" type="FEATURE-CATEGORY"/>
             <xs:element name="gml_geometry" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="LabelsType">
+        <xs:sequence>
+            <xs:element name="language" type="LANGUAGE-TAG"/>
+            <xs:element name="name" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>
