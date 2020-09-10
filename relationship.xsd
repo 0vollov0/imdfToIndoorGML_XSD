@@ -11,7 +11,7 @@
             schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     
     <xs:include schemaLocation="enumeration.xsd"/>
-    <xs:include schemaLocation="basic.xsd"/>
+    <xs:include schemaLocation="feature.xsd"/>
 
     <xs:element name="Relationship" type="RelationshipType"/>
     <xs:element name="FEATURE-REFERENCE" type="FEATURE-REFERENCE"/>

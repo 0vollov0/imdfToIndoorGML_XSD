@@ -14,7 +14,7 @@
         schemaLocation="http://schemas.opengis.net/indoorgml/1.0/indoorgmlcore.xsd"/>
 
     <xs:include schemaLocation="enumeration.xsd"/>
-    <xs:include schemaLocation="basic.xsd"/>
+    <xs:include schemaLocation="feature.xsd"/>
 
     <xs:element name="FootPrintSpace" type="FootPrintSpaceType" substitutionGroup="idc:CellSpace"/>
 

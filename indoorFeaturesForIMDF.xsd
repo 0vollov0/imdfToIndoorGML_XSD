@@ -16,12 +16,12 @@
     <xs:include schemaLocation="enumeration.xsd"/>
     <xs:include schemaLocation="occupant.xsd"/>
     <xs:include schemaLocation="relationship.xsd"/>
+    <xs:include schemaLocation="feature.xsd"/>
 
     <xs:element name="IndoorFeaturesForIMDF" type="IndoorFeaturesForIMDFType" substitutionGroup="idc:IndoorFeatures"/>
     <xs:element name="Manifest" type="ManifestType"/>
     <xs:element name="Address" type="AddressType"/>
     <xs:element name="Labels" type="LabelsType"/>
-    <xs:element name="FeatureInformation" type="FeatureInformationType"/>
 
     <xs:complexType name="IndoorFeaturesForIMDFType">
         <xs:complexContent>
@@ -67,12 +67,4 @@
         </xs:sequence>
     </xs:complexType>
     
-    <xs:complexType name="FeatureInformationType">
-        <xs:sequence>
-            <xs:element name="id" type="xs:string"/>
-            <xs:element name="type" type="xs:string"/>
-            <xs:element name="feature_type" type="FEATURE-CATEGORY"/>
-            <xs:element name="gml_geometry" type="xs:string" minOccurs="0" maxOccurs="1"/>
-        </xs:sequence>
-    </xs:complexType>
 </xs:schema>

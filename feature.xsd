@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    xmlns="https://0vollov0.github.io/imdfToIndoorGML_XSD"
+    targetNamespace="https://0vollov0.github.io/imdfToIndoorGML_XSD"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified"
+>
+    <xs:include schemaLocation="enumeration.xsd"/>
+    
+    <xs:element name="FeatureInformation" type="FeatureInformationType"/>
+    <xs:complexType name="FeatureInformationType">
+        <xs:sequence>
+            <xs:element name="id" type="xs:string"/>
+            <xs:element name="type" type="xs:string"/>
+            <xs:element name="feature_type" type="FEATURE-CATEGORY"/>
+            <xs:element name="gml_geometry" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
