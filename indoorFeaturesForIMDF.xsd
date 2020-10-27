@@ -21,8 +21,7 @@
     <xs:element name="IndoorFeaturesForIMDF" type="IndoorFeaturesForIMDFType" substitutionGroup="idc:IndoorFeatures"/>
     <xs:element name="Manifest" type="ManifestType"/>
     <xs:element name="Address" type="AddressType"/>
-
-
+    
     <xs:complexType name="IndoorFeaturesForIMDFType">
         <xs:complexContent>
             <xs:extension base="idc:IndoorFeaturesType">
