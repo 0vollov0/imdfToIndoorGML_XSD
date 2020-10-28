@@ -14,6 +14,7 @@
         schemaLocation="http://schemas.opengis.net/indoorgml/1.0/indoorgmlcore.xsd"/>
 
     <xs:include schemaLocation="enumeration.xsd"/>
+    <xs:include schemaLocation="basic.xsd"/>
     
     <xs:element name="FixtureSpace" type="FixtureSpaceType" substitutionGroup="idc:CellSpace"/>
     
@@ -24,6 +25,8 @@
                     <xs:element name="category" type="FIXTURE-CATEGORY"/>
                     <xs:element name="anchor_id" type="xs:string" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="level_id" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="name" type="LabelsType"/>
+                    <xs:element name="alt_name" type="LabelsType"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
