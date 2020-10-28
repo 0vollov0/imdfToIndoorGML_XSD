@@ -25,7 +25,7 @@
                     <xs:element name="category" type="FIXTURE-CATEGORY"/>
                     <xs:element name="anchor_id" type="xs:string" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="level_id" type="xs:string" minOccurs="0" maxOccurs="1"/>
-                    <xs:element name="name" type="LabelsType"/>
+                    <xs:element name="feature_name" type="LabelsType"/>
                     <xs:element name="alt_name" type="LabelsType"/>
                 </xs:sequence>
             </xs:extension>

@@ -26,6 +26,7 @@
                 <xs:sequence>
                     <xs:element name="category" type="AMENITY-CATEGORY"/>
                     <xs:element name="accessibility" type="ACCESSIBILITY-CATEGORY" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="feature_name" type="LabelsType"/>
                     <xs:element name="alt_name" type="LabelsType"/>
                     <xs:element name="hours" type="xs:string" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="phone" type="xs:string" minOccurs="0" maxOccurs="1"/>

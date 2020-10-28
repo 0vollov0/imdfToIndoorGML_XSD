@@ -26,7 +26,7 @@
                     <xs:element name="restriction" type="RESTRICTION-CATEGORY" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="accessibility" type="ACCESSIBILITY-CATEGORY" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="level_id" type="xs:string"/>
-                    <xs:element name="name" type="LabelsType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="feature_name" type="LabelsType" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="alt_name" type="LabelsType" minOccurs="0" maxOccurs="1"/>
                 </xs:sequence>
             </xs:extension>
