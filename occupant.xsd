@@ -26,8 +26,8 @@
             <xs:element name="ordinal" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="phone" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="website" type="xs:string" minOccurs="0" maxOccurs="1"/>                    
-            <xs:element name="validity" type="TEMPORALITYType"/>
-            <xs:element name="correlation_id" type="LabelsType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="validity" type="TEMPORALITYType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="correlation_id" type="xs:string" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 

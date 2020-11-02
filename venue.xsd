@@ -27,6 +27,7 @@
                     <xs:element name="hours" type="xs:string" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="phone" type="xs:string" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="website" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="address_id" type="xs:string"/>
                     <xs:element name="feature_name" type="LabelsType" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="alt_name" type="LabelsType" minOccurs="0" maxOccurs="1"/>
                 </xs:sequence>
