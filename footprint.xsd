@@ -26,7 +26,6 @@
                     <xs:element name="category" type="FEATURE-CATEGORY"/>
                     <xs:element name="building_ids" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
                     <xs:element name="feature_name" type="LabelsType" minOccurs="0" maxOccurs="1"/>
-                    <xs:element name="sibling_polygon_ids" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
