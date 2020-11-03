@@ -51,7 +51,7 @@
             <xs:element name="address" type="xs:string"/>
             <xs:element name="unit" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="locality" type="xs:string"/>
-            <xs:element name="province" type="xs:string"/>
+            <xs:element name="province" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="country" type="xs:string"/>
             <xs:element name="postal_code" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="postal_code_ext" type="xs:string" minOccurs="0" maxOccurs="1"/>
