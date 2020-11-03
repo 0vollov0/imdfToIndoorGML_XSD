@@ -24,7 +24,7 @@
             <xs:element name="anchor_id" type="xs:string"/>
             <xs:element name="hours" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="ordinal" type="xs:string" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="phone" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="phone" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="website" type="xs:string" minOccurs="0" maxOccurs="1"/>                    
             <xs:element name="validity" type="TEMPORALITYType" minOccurs="0" maxOccurs="1"/>
             <xs:element name="correlation_id" type="xs:string" minOccurs="0" maxOccurs="1"/>
