@@ -14,9 +14,20 @@
 
     <xs:include schemaLocation="enumeration.xsd"/>
     <xs:include schemaLocation="basic.xsd"/>
-
+    
+    <xs:element name="OpeningPrimalSpaceFeatures" type="OpeningPrimalSpaceFeaturesType" substitutionGroup="idc:PrimalSpaceFeatures"/>
     <xs:element name="OpeningCellSpaceBoundary" type="OpeningCellSpaceBoundaryType" substitutionGroup="idc:CellSpaceBoundary"/>
     <xs:element name="Door" type="DoorType"/>
+
+    <xs:complexType name="OpeningPrimalSpaceFeaturesType">
+        <xs:complexContent>
+            <xs:extension base="idc:PrimalSpaceFeaturesType">
+                <xs:sequence>
+                    <xs:element name="cellSpaceBoundaryMember" type="OpeningCellSpaceBoundaryType" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
 
     <xs:complexType name="OpeningCellSpaceBoundaryType">
         <xs:complexContent>

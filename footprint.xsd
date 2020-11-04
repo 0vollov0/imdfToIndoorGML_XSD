@@ -15,9 +15,22 @@
 
     <xs:include schemaLocation="enumeration.xsd"/>
     <xs:include schemaLocation="basic.xsd"/>
-
+    
+    <xs:element name="FootPrintPrimalSpaceFeatures" type="FootPrintPrimalSpaceFeaturesType" substitutionGroup="idc:PrimalSpaceFeatures"/>
     <xs:element name="FootPrintSpace" type="FootPrintSpaceType" substitutionGroup="idc:CellSpace"/>
-
+    <xs:element name="FootPrintState" type="FootPrintStateType" substitutionGroup="idc:State"/>
+    <xs:element name="FootPrintLayer" type="FootPrintSpaceLayerType" substitutionGroup="idc:SpaceLayer"/>
+    
+    <xs:complexType name="FootPrintPrimalSpaceFeaturesType">
+        <xs:complexContent>
+            <xs:extension base="idc:PrimalSpaceFeaturesType">
+                <xs:sequence>
+                    <xs:element name="cellSpaceMember" type="FootPrintSpaceType" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
     <xs:complexType name="FootPrintSpaceType">
         <xs:complexContent>
             <xs:extension base="idc:CellSpaceType">
@@ -27,6 +40,23 @@
                     <xs:element name="building_ids" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
                     <xs:element name="feature_name" type="LabelsType" minOccurs="0" maxOccurs="1"/>
                 </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="FootPrintSpaceLayerType">
+        <xs:complexContent>
+            <xs:extension base="idc:SpaceLayerType">
+                <xs:sequence>
+                    <xs:element name="nodes" type="FootPrintStateType" minOccurs="1" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="FootPrintStateType">
+        <xs:complexContent>
+            <xs:extension base="idc:StateType">
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>

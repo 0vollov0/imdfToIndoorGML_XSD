@@ -15,8 +15,21 @@
     <xs:include schemaLocation="enumeration.xsd"/>
     <xs:include schemaLocation="basic.xsd"/>
 
+    <xs:element name="UnitPrimalSpaceFeatures" type="UnitPrimalSpaceFeaturesType" substitutionGroup="idc:PrimalSpaceFeatures"/>
     <xs:element name="UnitSpace" type="UnitSpaceType" substitutionGroup="idc:CellSpace"/>
-
+    <xs:element name="UnitState" type="UnitStateType" substitutionGroup="idc:State"/>
+    <xs:element name="UnitLayer" type="UnitSpaceLayerType" substitutionGroup="idc:SpaceLayer"/>
+    
+    <xs:complexType name="UnitPrimalSpaceFeaturesType">
+        <xs:complexContent>
+            <xs:extension base="idc:PrimalSpaceFeaturesType">
+                <xs:sequence>
+                    <xs:element name="cellSpaceMember" type="UnitSpaceType" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
     <xs:complexType name="UnitSpaceType">
         <xs:complexContent>
             <xs:extension base="idc:CellSpaceType">
@@ -29,6 +42,23 @@
                     <xs:element name="feature_name" type="LabelsType" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="alt_name" type="LabelsType" minOccurs="0" maxOccurs="1"/>
                 </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="UnitSpaceLayerType">
+        <xs:complexContent>
+            <xs:extension base="idc:SpaceLayerType">
+                <xs:sequence>
+                    <xs:element name="nodes" type="UnitStateType" minOccurs="1" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="UnitStateType">
+        <xs:complexContent>
+            <xs:extension base="idc:StateType">
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>

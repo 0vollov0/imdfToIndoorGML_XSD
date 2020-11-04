@@ -16,7 +16,20 @@
     <xs:include schemaLocation="enumeration.xsd"/>
     <xs:include schemaLocation="basic.xsd"/>
     
+    <xs:element name="FixturePrimalSpaceFeatures" type="FixturePrimalSpaceFeaturesType" substitutionGroup="idc:PrimalSpaceFeatures"/>
     <xs:element name="FixtureSpace" type="FixtureSpaceType" substitutionGroup="idc:CellSpace"/>
+    <xs:element name="FixtureState" type="FixtureStateType" substitutionGroup="idc:State"/>
+    <xs:element name="FixtureLayer" type="FixtureSpaceLayerType" substitutionGroup="idc:SpaceLayer"/>
+    
+    <xs:complexType name="FixturePrimalSpaceFeaturesType">
+        <xs:complexContent>
+            <xs:extension base="idc:PrimalSpaceFeaturesType">
+                <xs:sequence>
+                    <xs:element name="cellSpaceMember" type="FixtureSpaceType" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
     
     <xs:complexType name="FixtureSpaceType">
         <xs:complexContent>
@@ -31,5 +44,22 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-
+    
+    <xs:complexType name="FixtureSpaceLayerType">
+        <xs:complexContent>
+            <xs:extension base="idc:SpaceLayerType">
+                <xs:sequence>
+                    <xs:element name="nodes" type="FixtureStateType" minOccurs="1" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="FixtureStateType">
+        <xs:complexContent>
+            <xs:extension base="idc:StateType">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
 </xs:schema>

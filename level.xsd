@@ -15,8 +15,19 @@
     <xs:include schemaLocation="enumeration.xsd"/>
     <xs:include schemaLocation="basic.xsd"/>
 
+    <xs:element name="LevelPrimalSpaceFeatures" type="LevelPrimalSpaceFeaturesType" substitutionGroup="idc:PrimalSpaceFeatures"/>
     <xs:element name="LevelSpace" type="LevelSpaceType" substitutionGroup="idc:CellSpace"/>
-
+    
+    <xs:complexType name="LevelPrimalSpaceFeaturesType">
+        <xs:complexContent>
+            <xs:extension base="idc:PrimalSpaceFeaturesType">
+                <xs:sequence>
+                    <xs:element name="cellSpaceMember" type="LevelSpaceType" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
     <xs:complexType name="LevelSpaceType">
         <xs:complexContent>
             <xs:extension base="idc:CellSpaceType">

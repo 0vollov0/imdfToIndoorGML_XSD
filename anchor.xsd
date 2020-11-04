@@ -16,7 +16,18 @@
       
     <xs:include schemaLocation="enumeration.xsd"/>
     
+    <xs:element name="AnchorSpaceLayer" type="AnchorSpaceLayerType" substitutionGroup="idc:SpaceLayer"/>
     <xs:element name="AnchorState" type="AnchorStateType" substitutionGroup="idc:State"/>
+    
+    <xs:complexType name="AnchorSpaceLayerType">
+        <xs:complexContent>
+            <xs:extension base="idc:SpaceLayerType">
+                <xs:sequence>
+                    <xs:element name="nodes" type="AnchorStateType" minOccurs="1" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
     
     <xs:complexType name="AnchorStateType">
         <xs:complexContent>

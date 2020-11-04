@@ -21,6 +21,7 @@
     <xs:element name="IndoorFeaturesForIMDF" type="IndoorFeaturesForIMDFType" substitutionGroup="idc:IndoorFeatures"/>
     <xs:element name="Manifest" type="ManifestType"/>
     <xs:element name="Address" type="AddressType"/>
+    <xs:element name="Detail" type="DetailType"/>
     
     <xs:complexType name="IndoorFeaturesForIMDFType">
         <xs:complexContent>
@@ -30,6 +31,7 @@
                     <xs:element name="address" type="AddressType"/>
                     <xs:element name="occupant" type="OccupantType" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="realationship" type="RelationshipType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="detail" type="DetailType" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -56,6 +58,13 @@
             <xs:element name="postal_code" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="postal_code_ext" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="postal_code_vanity" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="DetailType">
+        <xs:sequence>
+            <xs:element name="featureInformation" type="FeatureInformationType"/>
+            <xs:element name="level_id" type="xs:string" />
         </xs:sequence>
     </xs:complexType>
 </xs:schema>

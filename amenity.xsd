@@ -17,8 +17,19 @@
      
     <xs:include schemaLocation="enumeration.xsd"/>
     <xs:include schemaLocation="basic.xsd"/>
-
+    
+    <xs:element name="AmenityLayer" type="AmenitySpaceLayerType" substitutionGroup="idc:SpaceLayer"/>
     <xs:element name="AmenityState" type="AmenityStateType" substitutionGroup="idc:State"/>
+    
+    <xs:complexType name="AmenitySpaceLayerType">
+        <xs:complexContent>
+            <xs:extension base="idc:SpaceLayerType">
+                <xs:sequence>
+                    <xs:element name="nodes" type="AmenityStateType" minOccurs="1" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
     
     <xs:complexType name="AmenityStateType">
         <xs:complexContent>

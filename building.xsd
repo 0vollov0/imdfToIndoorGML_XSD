@@ -18,7 +18,18 @@
     <xs:include schemaLocation="enumeration.xsd"/>
     <xs:include schemaLocation="basic.xsd"/>
     
+    <xs:element name="BuildingSpaceLayer" type="BuildingSpaceLayerType" substitutionGroup="idc:SpaceLayer"/>
     <xs:element name="BuildingState" type="BuildingStateType" substitutionGroup="idc:State"/>
+    
+    <xs:complexType name="BuildingSpaceLayerType">
+        <xs:complexContent>
+            <xs:extension base="idc:SpaceLayerType">
+                <xs:sequence>
+                    <xs:element name="nodes" type="BuildingStateType" minOccurs="1" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
     
     <xs:complexType name="BuildingStateType">
         <xs:complexContent>

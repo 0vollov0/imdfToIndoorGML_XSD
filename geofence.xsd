@@ -15,9 +15,21 @@
     <xs:include schemaLocation="enumeration.xsd"/>
     <xs:include schemaLocation="basic.xsd"/>
 
-    <xs:element name="GeofenceSpace" type="GeofenceSpaceType"
-        substitutionGroup="idc:CellSpace"/>
-
+    <xs:element name="GeofencePrimalSpaceFeatures" type="GeofencePrimalSpaceFeaturesType" substitutionGroup="idc:PrimalSpaceFeatures"/>
+    <xs:element name="GeofenceSpace" type="GeofenceSpaceType" substitutionGroup="idc:CellSpace"/>
+    <xs:element name="GeofenceState" type="GeofenceStateType" substitutionGroup="idc:State"/>
+    <xs:element name="GeofenceLayer" type="GeofenceSpaceLayerType" substitutionGroup="idc:SpaceLayer"/>
+    
+    <xs:complexType name="GeofencePrimalSpaceFeaturesType">
+        <xs:complexContent>
+            <xs:extension base="idc:PrimalSpaceFeaturesType">
+                <xs:sequence>
+                    <xs:element name="cellSpaceMember" type="GeofenceSpaceType" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
     <xs:complexType name="GeofenceSpaceType">
         <xs:complexContent>
             <xs:extension base="idc:CellSpaceType">
@@ -25,15 +37,32 @@
                     <xs:element name="featureInformation" type="FeatureInformationType"/>
                     <xs:element name="category" type="GEOFENCE-CATEGORY"/>
                     <xs:element name="restriction" type="RESTRICTION-CATEGORY" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="feature_name" type="LabelsType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="alt_name" type="LabelsType" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="correlation_id" type="xs:string" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="building_ids" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="level_ids" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="parents" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-                    <xs:element name="feature_name" type="LabelsType" minOccurs="0" maxOccurs="1"/>
-                    <xs:element name="alt_name" type="LabelsType" minOccurs="0" maxOccurs="1"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-
+    
+    <xs:complexType name="GeofenceSpaceLayerType">
+        <xs:complexContent>
+            <xs:extension base="idc:SpaceLayerType">
+                <xs:sequence>
+                    <xs:element name="nodes" type="GeofenceStateType" minOccurs="1" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="GeofenceStateType">
+        <xs:complexContent>
+            <xs:extension base="idc:StateType">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
 </xs:schema>
