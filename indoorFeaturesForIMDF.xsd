@@ -17,6 +17,15 @@
     <xs:include schemaLocation="occupant.xsd"/>
     <xs:include schemaLocation="relationship.xsd"/>
     <xs:include schemaLocation="basic.xsd"/>
+    
+    <xs:include schemaLocation="venue.xsd"/>
+    <xs:include schemaLocation="section.xsd"/>
+    <xs:include schemaLocation="level.xsd"/>
+    <xs:include schemaLocation="fixture.xsd"/>
+    <xs:include schemaLocation="unit.xsd"/>
+    <xs:include schemaLocation="kiosk.xsd"/>
+    <xs:include schemaLocation="geofence.xsd"/>
+    <xs:include schemaLocation="opening.xsd"/>
 
     <xs:element name="IndoorFeaturesForIMDF" type="IndoorFeaturesForIMDFType" substitutionGroup="idc:IndoorFeatures"/>
     <xs:element name="Manifest" type="ManifestType"/>
@@ -32,6 +41,14 @@
                     <xs:element name="occupant" type="OccupantType" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="realationship" type="RelationshipType" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="detail" type="DetailType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="VenuePrimalSpaceFeatures" type="VenuePrimalSpaceFeaturesType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="sectionPrimalSpaceFeatures" type="SectionPrimalSpaceFeaturesType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="levelPrimalSpaceFeatures" type="LevelPrimalSpaceFeaturesType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="fixturePrimalSpaceFeatures" type="FixturePrimalSpaceFeaturesType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="unitPrimalSpaceFeatures" type="UnitPrimalSpaceFeaturesType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="kioskPrimalSpaceFeatures" type="KioskPrimalSpaceFeaturesType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="geofencePrimalSpaceFeatures" type="GeofencePrimalSpaceFeaturesType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="openingPrimalSpaceFeatures" type="OpeningPrimalSpaceFeaturesType" minOccurs="0" maxOccurs="1"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
